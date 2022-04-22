@@ -31,14 +31,58 @@
 <!-- ABOUT SECTION -->
 
 <section>
-    <p> O projekcie </p>
+    <div class="container-lg">
+        <h2>Logika strony intenetowej</h2>
+        <p>Strona internetowa oferuje możliwość dodania kilku <em>Studenckich Kubków</em> (kufelków - i to oczywiście
+            żart ☻) do koszyka.
+            Następnie użytkownik może dokonać zakupu. User Journey powinno się rozpocząć na stronie /home,
+            następnie /kubki i zakończyć na /koszyk.</p>
+        <h2>Część techniczna</h2>
+        <p>Aplikacja bazuje na architekturze MVC. Użytkownik, poprzez frontend wysyła zapytania na stronę serwerową,
+            gdzie aplikacja korzysta z wbudowanej bazy danych H2. Baza danyh posiada dwie tabele. Pierwsza zawiera
+            ceny kufelków i za każdym razem kiedy użytkownik robi POST request, ta tabela podaje cenę konretnego kufelka
+            (id jest przekazywane przez query parameter). Druga tabela, "CARTS" pozwala na zssumowanie kilku produktów w
+            jeden koszyk zakupowy. Po dokonaiu zakupu, wartość koszyka się zeruje. Aplikacja utrzymuje sesje
+            użytkownika. </p>
+        <h2>Technologie wykorzystane</h2>
+        <div class="container-md">
+            <div class="row">
+                <div class="col-sm">
+                    <h5>Frontend</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Thymeleaf - silnik frontendowy</li>
+                        <li class="list-group-item">Bootstrap</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <h5>Backend</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Java & Spring</li>
+                        <li class="list-group-item">H2 DB</li>
+                    </ul>
+                </div>
+                <div class="col-sm">
+                    <h5>Wdrożenie</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Docker</li>
+                        <li class="list-group-item">AWS ECS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h3>Linki</h3>
+        <ul>
+            <li><a href="https://github.com/lpokrzyw/kubki-okno-projekt">GitHub repo</a></li>
+            <li><a href="https://unsplash.com/">Żródło wykorzystanych zdjęć</a></li>
+        </ul>
+    </div>
 </section>
 
 <!-- Footer -->
 
 <section>
     <footer class="white-section" id="footer">
-        <div class="container-fluid">
+        <div class="container-fluid fixed-bottom">
             <i class="social-icon fab fa-facebook-f"></i>
             <i class="social-icon fab fa-twitter"></i>
             <i class="social-icon fab fa-instagram"></i>
