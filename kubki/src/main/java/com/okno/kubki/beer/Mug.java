@@ -12,10 +12,11 @@ public class Mug {
 
     @Id
     private int id;
-    @Column(name = "Price", nullable = false)
+    @Column(name = "PRICE", nullable = false)
     private double price;
 
-    public Mug() {}
+    public Mug() {
+    }
 
     public Mug(int id, double price) {
         super();

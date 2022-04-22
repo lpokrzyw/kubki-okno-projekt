@@ -7,48 +7,53 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" th:href="@{/css/style.css}" type="text/css"/>
 </head>
-    <body>
+<body>
 
-        <!--   HEADER SECTION -->
+<!--   HEADER SECTION -->
 
-        <section>
-            <div class="container">
-                <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-                    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                        <span class="fs-4">Studenckie Kubki</span>
-                    </a>
+<section>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <span class="fs-4">Studenckie Kubki</span>
+            </a>
 
-                    <ul class="nav nav-pills">
-                        <li class="nav-item"><a href="/home" class="nav-link text-dark">Home</a></li>
-                        <li class="nav-item"><a href="/mugs" class="nav-link text-dark">Kubki</a></li>
-                        <li class="nav-item"><a href="/cart" class="nav-link text-dark">Koszyk</a></li>
-                        <li class="nav-item"><a href="/about" class="nav-link text-dark">O projekcie</a></li>
-                    </ul>
-                </header>
-            </div>
-        </section>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="/home" class="nav-link text-dark">Home</a></li>
+                <li class="nav-item"><a href="/mugs" class="nav-link text-dark">Kubki</a></li>
+                <li class="nav-item"><a href="/cart" class="nav-link text-dark">Koszyk</a></li>
+                <li class="nav-item"><a href="/about" class="nav-link text-dark">O projekcie</a></li>
+            </ul>
+        </header>
+    </div>
+</section>
 
-        <!-- CART -->
+<!-- CART -->
 
-        <section>
-            <div class="container" id="cart">
-                <p class="justify-content-center"> Obecna wartość koszyka to:  <span th:text="${cartTotal}"></span></p>
-            </div>
-        </section>
+<section>
+    <div class="container" id="cart">
+        <p class="justify-content-center"> Obecna wartość koszyka to: <span th:text="${cartTotal}"></span></p>
+    </div>
+    <div class="container">
+        <form method="POST" th:action="@{/cart}">
+            <button class="btn btn-lg btn-block btn-outline-dark" type="submit">Złóż zamówienie</button>
+        </form>
+    </div>
+</section>
 
-        <!-- Footer -->
+<!-- Footer -->
 
-        <section>
-            <footer class="white-section" id="footer">
-                <div class="container-fluid">
-                    <i class="social-icon fab fa-facebook-f"></i>
-                    <i class="social-icon fab fa-twitter"></i>
-                    <i class="social-icon fab fa-instagram"></i>
-                    <i class="social-icon fas fa-envelope"></i>
-                    <p> &copy; Copyright 2022 Studenckie Kubki by Łukasz Pokrzywka</p>
-                </div>
-            </footer>
-        </section>
+<section>
+    <footer class="white-section" id="footer">
+        <div class="container-fluid navbar-fixed-bottom">
+            <i class="social-icon fab fa-facebook-f"></i>
+            <i class="social-icon fab fa-twitter"></i>
+            <i class="social-icon fab fa-instagram"></i>
+            <i class="social-icon fas fa-envelope"></i>
+            <p> &copy; Copyright 2022 Studenckie Kubki by Łukasz Pokrzywka</p>
+        </div>
+    </footer>
+</section>
 
-    </body>
+</body>
 </html>
