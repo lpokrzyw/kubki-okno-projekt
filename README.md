@@ -2,7 +2,7 @@
 Projekt strony internetowej na przedmiot Architektury i technologie systemów internetowych (2022L) - Politechnika Warszawska OKNO
 
 ## Docker
-Link do działającej strony: [18.197.14.156:8888](18.197.14.156:8888)
+Link do działającej strony: [18.197.14.156:8888](http://18.197.14.156:8888)
 
 ## Docker
 Obraz: docker.io/lpokrzyw/kubki:v1
